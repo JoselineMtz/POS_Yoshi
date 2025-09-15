@@ -1,0 +1,272 @@
+/* Pos.module.css */
+
+/* Contenedor principal */
+.posContainerMain {
+  padding: 40px;
+  background: #f4f6fa;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sección */
+.posSection {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+/* Contenedor de tarjetas */
+.posCardsContainer {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Tarjetas */
+.posCard {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 30px;
+  flex: 1 1 400px;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.posCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.posCard h4 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+/* Items de formulario */
+.posItem {
+  margin-bottom: 20px;
+}
+
+.posItem label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.posItem input,
+.posItem select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.posItem input:focus,
+.posItem select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+  outline: none;
+}
+
+/* Lista de productos */
+.saleItemsList {
+  margin-top: 20px;
+}
+
+.saleItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.saleItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Scrollbar estilizado */
+.saleItems::-webkit-scrollbar {
+  width: 8px;
+}
+
+.saleItems::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.saleItems::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 8px;
+}
+
+.saleItems::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Total */
+.totalDisplay {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Cambio y Saldo Profesional Centrado y Destacado */
+.changeDisplayContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.changeDisplayContainer span {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 5px 0;
+  display: block;
+  text-align: center;
+}
+
+.changeDisplayContainer p {
+  font-size: 1.4rem;
+  margin: 5px 0 0 0;
+  font-weight: 600;
+  color: #495057;
+  text-align: center;
+}
+
+/* Estados de cambio */
+.positiveChange {
+  color: #10b981;
+  border: 3px solid #10b981;
+  background-color: rgba(16,185,129,0.1);
+}
+
+.negativeChange {
+  color: #ef4444;
+  border: 3px solid #ef4444;
+  background-color: rgba(239,68,68,0.1);
+}
+
+.zeroChange {
+  color: #6c757d;
+  border: 3px solid #adb5bd;
+  background-color: rgba(173,181,189,0.15);
+}
+
+/* Hover para efecto de profundidad */
+.changeDisplayContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Botones */
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  background-color: #6366f1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ced4da;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.modalContent h4 {
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+}
+
+.modalInput:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+  outline: none;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}

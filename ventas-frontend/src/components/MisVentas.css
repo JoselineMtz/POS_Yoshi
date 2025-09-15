@@ -1,0 +1,415 @@
+/* MisVentas.css */
+.mis-ventas-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ventas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ventas-header h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filtros button {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e9ecef;
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filtros button:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.filtros button.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/* Estadísticas */
+.estadisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.estadistica-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.estadistica-card:hover {
+  transform: translateY(-2px);
+}
+
+.estadistica-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.estadistica-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.estadistica-valor {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.estadistica-valor.deuda {
+  color: #e74c3c;
+}
+
+/* Lista de ventas */
+.ventas-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ventas-section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.sin-ventas {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.ventas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.venta-tarjeta {
+  border: 2px solid #e9ecef;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.venta-tarjeta:hover {
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+  transform: translateY(-1px);
+}
+
+.venta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.venta-numero {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.venta-fecha {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.venta-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.venta-monto {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.venta-monto strong {
+  font-size: 1.3rem;
+  color: #27ae60;
+}
+
+.metodo-pago {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.metodo-pago.efectivo {
+  background: #d4edda;
+  color: #155724;
+}
+
+.metodo-pago.transferencia {
+  background: #cce7ff;
+  color: #004085;
+}
+
+.metodo-pago.credito {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.venta-cliente {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.venta-deuda {
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 1rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.cerrar-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.cerrar-modal:hover {
+  background: #f8f9fa;
+  color: #2c3e50;
+}
+
+.venta-detalles {
+  padding: 1.5rem;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.detalle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detalle-item label {
+  font-weight: 600;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.detalle-item span {
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.monto-total {
+  font-weight: 700;
+  color: #27ae60;
+  font-size: 1.2rem !important;
+}
+
+.deuda-texto {
+  color: #e74c3c !important;
+  font-weight: 600;
+}
+
+.productos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.producto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.producto-nombre {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.producto-sku {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.producto-precios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.producto-cantidad {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.producto-total {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.producto-total-general {
+  padding: 1rem;
+  background: #e9ecef;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mis-ventas-container {
+    padding: 1rem;
+  }
+  
+  .ventas-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .estadisticas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .venta-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .producto-item {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .producto-precios {
+    align-items: center;
+  }
+}
+
+.cargando {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #6c757d;
+}
